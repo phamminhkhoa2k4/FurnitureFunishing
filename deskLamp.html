@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./asset/css/homeOffice.css">
+    <link rel="stylesheet" href="./asset/css/relative.css">
+    <link rel="stylesheet" href="./asset/css/breadcrumb.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="./asset/fonts/favicon_io/favicon.ico">
+    <script src="./js/AngularJS/angular.min.js"></script>
+    <script src="./js/AngularJS/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Hudson Furnishing | Desk Lamp </title>
+    <style>
+        .color-filter-black {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background: #000;
+            display: inline-block;
+        }
+
+        .color-filter-gray {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background: #808080;
+            display: inline-block;
+        }
+
+        .color-filter-white {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background: #fff;
+            display: inline-block;
+            box-shadow: 1px 1px 1px rgba(40, 40, 40, 0.1);
+        }
+
+        .color-filter-soil {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background: #deb887;
+            display: inline-block;
+        }
+
+        .color-filter-brown {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background: #964b00;
+            display: inline-block;
+        }
+
+        .color-filter-green {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background: green;
+            display: inline-block;
+        }
+
+        .price-max::-webkit-inner-spin-button,
+        .price-min::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl" id="change">
+    <div id="header">
+        <div class="container">
+            <div class="container-wrapper">
+                <button class="header-menu-btn">
+                    <div class="header-menu-btn-icon">
+                        <span class="icon-open js-open"><i class='bx bx-menu'></i></span>
+                        <span class="icon-close hide js-close"><i class='bx bx-x'></i></span>
+                    </div>
+                </button>
+                <h1 class="header-logo">
+                    <a href="./home.html" class="header-logo-image">
+                        <img class="image" src="./asset/img/Logo.jpg" alt="">
+                    </a>
+                </h1>
+                <div class="header-search hidden-search">
+                    <form action="" class="header-search-wrapper">
+                        <label for="link-label" class="label-hidden">Search</label>
+                        <input type="text" placeholder="Search" class="header-search-input" id="link-label" ng-model="searchProduct" autocomplete="off">
+                        <div class="suggest-product" id="suggest-result" >
+                            <div class="suggest-product-wrapper">
+                                <div class="suggest-product-inner">
+                                    <div class="suggest-product-content">
+                                        <div class="suggest-product-content-wrapper">
+                                            <a href="" class="suggest-product-content-product" ng-repeat="product in products | filter:searchProduct|limitTo:6" ng-click="officeDetail(product)">
+                                                <div class="suggest-content-product-images">
+                                                    <img src="{{product.picture}}" alt="" class="suggest-content-product-images-img">
+                                                </div>
+                                                <div class="suggest-content-product-description">
+                                                    <h3 class="suggest-content-product-description-brand">{{product.brand}}</h3>
+                                                    <p class="suggest-content-product-description-name">{{product.name}}</p>
+                                                    <span class="suggest-content-product-description-price">${{product.price}}</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="header-search-btn">
+                            <span><i class='bx bx-search'></i></span>
+                        </button>
+                    </form>
+                </div>
+                <div class="header-action-wrapper">
+                    <ul class="header-action">
+                        <li class="header-action-item js-feedback-btn"><a href="#" class="link-action"><i
+                                    class='bx bx-pencil'></i><span class="header-action-text-hidden">Feed
+                                    Back</span></a></li>
+                        <li class="header-action-item js-sign-in"><a href="" class="link-action"><i
+                                    class='bx bx-user-circle'></i><span class="header-action-text-hidden">Sign
+                                    In</span></a></li>
+                        <li class="header-action-item "><a href="./shipping_page.html"
+                                class="link-action link-action-cart-active"><i class='bx bx-cart'></i><span
+                                    class="header-action-text-hidden">My Cart</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-wrapper">
+            <nav class="header-navbar">
+                <ul class="header-navbar-list">
+                    <li class="header-navbar-item">
+                        <a href="./home.html" class="header-navbar-link">Home</a>
+                    </li>
+                    <li class="header-navbar-item">
+                        <a href="./furniture.html" class="header-navbar-link">Furniture</a>
+                    </li>
+                    <li class="header-navbar-item">
+                        <a href="./homeOffice.html" class="header-navbar-link">Home Office</a>
+                    </li>
+                    <li class="header-navbar-item">
+                        <a href="./Livingroom.html" class="header-navbar-link">Living Room</a>
+                    </li>
+                    <li class="header-navbar-item">
+                        <a href="./Bedroom.html" class="header-navbar-link">Bed Room</a>
+                    </li>
+                    <li class="header-navbar-item">
+                        <a href="./DiningRoom.html" class="header-navbar-link">Dining Room</a>
+                    </li>
+                    <li class="header-navbar-item">
+                        <a href="./Outdoor.html" class="header-navbar-link">Outdoor</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="header-search" class="header-sub-search-wrapper">
+            <div class="header-sub-search">
+                <form action="">
+                    <input type="text" class="header-sub-search-input" placeholder="Search" id="khoa-handsome" ng-model="searchProduct" autocomplete="off">
+                    <div class="suggest-product" id="suggest-result2">
+                        <div class="suggest-product-wrapper">
+                            <div class="suggest-product-inner">
+                                <div class="suggest-product-content">
+                                    <div class="suggest-product-content-wrapper">
+                                        <a href="" class="suggest-product-content-product" ng-repeat="product in products | filter:searchProduct|limitTo:6" ng-click="officeDetail(product)">
+                                            <div class="suggest-content-product-images">
+                                                <img src="{{product.picture}}" alt="" class="suggest-content-product-images-img">
+                                            </div>
+                                            <div class="suggest-content-product-description">
+                                                <h3 class="suggest-content-product-description-brand">{{product.brand}}</h3>
+                                                <p class="suggest-content-product-description-name">{{product.name}}</p>
+                                                <span class="suggest-content-product-description-price">${{product.price}}</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="header-sub-search-btn">
+                        <span><i class='search-icon bx bx-search'></i></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="navigation-sub-wrapper js-taskbar is-active">
+            <nav class="header-sub-navbar">
+                <ul class="header-sub-navbar-list">
+                    <li class="header-sub-navar-item">
+                        <a href="./home.html" class="header-sub-navbar-link">
+                            <span class="header-sub-navbar-label">Home</span>
+                            <div class="header-sub-navbar-icon">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </a>
+                        <div class="header-sub-navbar-dropdown"></div>
+                    </li>
+                    <li class="header-sub-navar-item">
+                        <a href="./furniture.html" class="header-sub-navbar-link">
+                            <span class="header-sub-navbar-label">Furniture</span>
+                            <div class="header-sub-navbar-icon">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </a>
+                        <div class="header-sub-navbar-dropdown"></div>
+                    </li>
+                    <li class="header-sub-navar-item">
+                        <a href="./homeOffice.html" class="header-sub-navbar-link">
+                            <span class="header-sub-navbar-label">Home Office</span>
+                            <div class="header-sub-navbar-icon">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </a>
+                        <div class="header-sub-navbar-dropdown"></div>
+                    </li>
+                    <li class="header-sub-navar-item">
+                        <a href="./livingroom.html" class="header-sub-navbar-link">
+                            <span class="header-sub-navbar-label">Living Room</span>
+                            <div class="header-sub-navbar-icon">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </a>
+                        <div class="header-sub-navbar-dropdown"></div>
+                    </li>
+                    <li class="header-sub-navar-item">
+                        <a href="./Bedroom.html" class="header-sub-navbar-link">
+                            <span class="header-sub-navbar-label">Bed Room</span>
+                            <div class="header-sub-navbar-icon">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </a>
+                        <div class="header-sub-navbar-dropdown"></div>
+                    </li>
+                    <li class="header-sub-navar-item">
+                        <a href="./Diningroom.html" class="header-sub-navbar-link">
+                            <span class="header-sub-navbar-label">Dining Room</span>
+                            <div class="header-sub-navbar-icon">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </a>
+                        <div class="header-sub-navbar-dropdown"></div>
+                    </li>
+                    <li class="header-sub-navar-item">
+                        <a href="./Outdoor.html" class="header-sub-navbar-link">
+                            <span class="header-sub-navbar-label">OutDoor</span>
+                            <div class="header-sub-navbar-icon">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </a>
+                        <div class="header-sub-navbar-dropdown"></div>
+                    </li>
+                </ul>
+                <div class="header-bottom-sub-navbar">
+                    <ul class="header-bottom-sub-navbar-action">
+                        <li class="header-bottom-sub-navbar-action-item js-sign-in2">
+                            <a href="#" class="header-bottom-sub-navbar-action-link">
+                                <i class='bx bx-user-circle'></i>
+                                <span>Sign In</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header-bottom-sub-navbar-shopinfo">
+                        <div class="header-bottom-sub-navbar-shopinfo-title"><a href="./contactUs.html">Need Help? Contact Us</a></div>
+                        <div class="header-bottom-sub-navbar-shopinfo-phone">
+                            <a href="tel:0783650619">0783650619</a>
+                        </div>
+                        <div class="header-bottom-sub-navbar-shopinfo-openhours">7am - 9pm</div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- content-main -->
+    <div id="main">
+        <div >
+            <header id="header2">
+                <!-- breadcrumb -->
+                <ul class="breadcrumb">
+                    <li><a href="./home.html"><i class='bx bx-home'></i></a></li>
+                    <li><a href="./furniture.html">Furniture</a></li>
+                    <li><a href="./homeOffice.html">Home Office</a></li>
+                    <li>Desk Lamps</li>
+                </ul>
+                <div class="header-wrapper">
+                    <div class="header-title">
+                        <div class="header-title-inner">
+                            <h1 class="header-title-desc">Desk Lamps</h1>
+                        </div>
+                    </div>
+                    <div class="header-image" style="border-bottom:1px solid #dadada ;">
+                    </div>
+                </div>
+            </header>
+            <div id="container">
+                <div class="container-content">
+                    <div class="grid">
+                        <div class="grid-item grid-3 ">
+                            <div class="grid-item-sidebar">
+                                <div class="grid-item-sidebar-wrapper" style="min-height:initial">
+                                    <!--  -->
+                                    <div class="grid-item-sidebar-filter">
+                                        <div class="grid-item-sidebar-filter-content-wrapper">
+                                            <div class="close-icon js-close-btn"><i class='bx bx-x'
+                                                    style="color: #000;"></i></div>
+                                            <h3 class="grid-item-sidebar-filter-content-title">Filters</h3>
+                                            <div class="grid-item-sidebar-filter-content-item ">
+                                                <h4 class="grid-item-sidebar-filter-content-item-title">
+                                                    CATEGORY
+                                                </h4>
+                                                <div class="grid-item-sidebar-filter-content-item-dropdown">
+                                                    <ul class="grid-item-sidebar-filter-content-item-dropdown-list">
+                                                        <li class="grid-item-sidebar-filter-content-item-dropdown-item">
+                                                            <input type="checkbox"
+                                                                class="grid-item-sidebar-filter-content-item-dropdown-item-checkbox js-category-filter"
+                                                                value="lamp" ng-model="ckChairs"
+                                                                onclick="system()"> Lamp</li>
+                                                      
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="grid-item-sidebar-filter-content-item">
+                                                <h4 class="grid-item-sidebar-filter-content-item-title">
+                                                    COLOR
+                                                </h4>
+                                                <div class="grid-item-sidebar-filter-content-item-dropdown">
+                                                    <ul class="grid-item-sidebar-filter-content-item-dropdown-list">
+                                                        <li class="grid-item-sidebar-filter-content-item-dropdown-item">
+                                                            <input type="checkbox"
+                                                                class="grid-item-sidebar-filter-content-item-dropdown-item-checkbox js-color-filter"
+                                                                value="#000" ng-model="black" onclick="system()"> <span
+                                                                class="color-filter-black"></span> Black</li>
+                                                        <li class="grid-item-sidebar-filter-content-item-dropdown-item">
+                                                            <input type="checkbox"
+                                                                class="grid-item-sidebar-filter-content-item-dropdown-item-checkbox js-color-filter"
+                                                                value="#808080" ng-model="gray" onclick="system()">
+                                                            <span class="color-filter-gray"></span> Gray</li>
+                                                   
+                                                        <li class="grid-item-sidebar-filter-content-item-dropdown-item">
+                                                            <input type="checkbox"
+                                                                class="grid-item-sidebar-filter-content-item-dropdown-item-checkbox js-color-filter"
+                                                                value="#fff" ng-model="white" onclick="system()"> <span
+                                                                class="color-filter-white"></span> White</li>
+                                                       
+                                                        <li class="grid-item-sidebar-filter-content-item-dropdown-item">
+                                                            <input type="checkbox"
+                                                                class="grid-item-sidebar-filter-content-item-dropdown-item-checkbox js-color-filter"
+                                                                value="green" ng-model="green" onclick="system()"> <span
+                                                                class="color-filter-green"></span> Green</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="grid-item-sidebar-filter-content-item">
+                                                <h4 class="grid-item-sidebar-filter-content-item-title">
+                                                    PRICE
+                                                </h4>
+                                                <div class="grid-item-sidebar-filter-content-item-dropdown">
+                                                    <div
+                                                        class="grid-item-sidebar-filter-content-item-dropdown-header-wrapper">
+                                                        <div
+                                                            class="grid-item-sidebar-filter-content-item-dropdown-header-inner">
+                                                            <div class="rz-slider">
+                                                                <div class="slider-range-wrapper">
+                                                                    <div class="slider-range"></div>
+                                                                </div>
+                                                                <div class="slider-input-range-wrapper">
+                                                                    <input type="range" class="slider-input-range-min"
+                                                                        min="0" max="10000" step="100" value="0" 
+                                                                        style="box-shadow:none">
+                                                                    <input type="range" class="slider-input-range-max"
+                                                                        min="0" max="10000" step="100" value="10000" 
+                                                                        style="box-shadow:none">
+                                                                </div>
+                                                                <span class="slide-begin slide-begin-left"
+                                                                    style="opacity:1">0$</span>
+                                                                <span class="slide-begin slide-begin-right"
+                                                                    style="opacity:1">10000$</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="grid-item-sidebar-filter-content-item-dropdown-body-wrapper">
+                                                        <div
+                                                            class="grid-item-sidebar-filter-content-item-dropdown-body-inner">
+                                                            <div
+                                                                class="grid-item-sidebar-filter-content-item-dropdown-body-price">
+                                                                <div
+                                                                    class="grid-item-sidebar-filter-content-item-dropdown-body-min js-input-price">
+                                                                    <label for="minPrice">min price</label><br>
+                                                                    <input type="number" min="0" value="0" id="minPrice" ng-model="pricemin"
+                                                                        class="price-min" oninput="system()"
+                                                                        style="box-shadow:none">
+                                                                </div>
+                                                                <div
+                                                                    class="grid-item-sidebar-filter-content-item-dropdown-body-max js-input-price">
+                                                                    <label for="maxPrice">max price</label><br>
+                                                                    <input type="number" max="10000" value="10000" ng-model="pricemax"
+                                                                        id="maxPrice" class="price-max"
+                                                                        oninput="system()" style="box-shadow:none">
+                                                                </div>
+                                                            </div>
+                                                            <button class="grid-item-sidebar-filter-content-item-dropdown-body-btn" ng-model="apply" onchange="system()">Apply</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="grid-item-sidebar-filter-content-item">
+                                                <h4 class="grid-item-sidebar-filter-content-item-title">
+                                                    BRAND
+                                                </h4>
+                                                <div class="grid-item-sidebar-filter-content-item-dropdown">
+                                                    <ul class="grid-item-sidebar-filter-content-item-dropdown-list">
+                                                        <li class="grid-item-sidebar-filter-content-item-dropdown-item">
+                                                            <input type="checkbox"
+                                                                class="grid-item-sidebar-filter-content-item-dropdown-item-checkbox js-brand-filter"
+                                                                value="MUUTO" ng-model="ckMUUTO" onclick="system()">
+                                                            MUUTO</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="grid-item-sidebar-filter-button-wrapper">
+                                            <button>Show Result</button>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                </div>
+                            </div>
+                        </div> <!-- -->
+                        <div class="grid-item grid-9 khoa">
+                            <div class="grid-content">
+                                <div class="grid-content-wrapper" style="min-height:initial">
+                                    <!--  -->
+                                    <div class="grid-content-inner">
+                                        <div class="grid-content-product-layout">
+                                            <div class="layout-toolbar">
+                                                <button class="layout-toolbar-btn js-open-filter">
+                                                    Filter
+                                                </button>
+                                            </div>
+                                            <div class="layout-product">
+                                                <div class="layout-product-grid-flex grid">
+
+                                                    <div class="product-cart"
+                                                        ng-repeat="product in products|filterFunction"
+                                                        ng-click="officeDetail(product)">
+                                                        <div class="product-cart-item">
+                                                            <div class="product-cart-wishlist-btn">
+                                                                <span class="wishlist-icon">
+                                                                    <i class='bx bx-heart'></i>
+                                                                    <i class='bx bxs-heart'></i>
+                                                                </span>
+                                                            </div>
+                                                            <a href="" class="product-cart-image">
+                                                                <div class="product-cart-image-wrapper">
+                                                                    <img src="{{product.picture}}" alt="attention"
+                                                                        class="product-cart-image-img image-display"
+                                                                        style="height:320px;width:320px ">
+                                                                </div>
+                                                            </a>
+                                                            <div class="product-cart-color" style="min-height:20px">
+                                                                <label for="" class="product-cart-color-black">
+                                                                    <span style="background:{{product.color}}"></span>
+                                                                </label>
+                                                                <label for="" class="product-cart-color-white">
+                                                                    <span style="background:{{product.color1}}"></span>
+                                                                </label>
+                                                                <label for="" class="product-cart-color-brown">
+                                                                    <span style="background:{{product.color2}}"></span>
+                                                                </label>
+                                                                <label for="" class="product-cart-color-grey">
+                                                                    <span style="background:{{product.color3}}"></span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="product-cart-info" style="min-height:112px">
+                                                                <p style="display: none;">{{product.category}}</p>
+                                                                <p class="product-cart-info-brand">{{product.brand}}</p>
+                                                                <h3 class="product-cart-info-title">{{product.name}}
+                                                                </h3>
+                                                                <p class="product-cart-info-price"><span
+                                                                        style="font-size: 13px;">$</span>{{product.price}}
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <script src="./js/deskLamps.js"></script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- grid -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="relative">
+        <div class="relative-heading">
+            <h1>related products</h1>
+            <p>
+                <span class="icon-arrow icon-arrow-left">&#139;</span>
+                <span class="icon-arrow icon-arrow-right">&#155;</span>
+            </p>
+        </div>
+        <div class="relative-content">
+            <div class="relative-product" ng-repeat="product in products">
+                <div class="relative-images">
+                    <img src="{{product.picture}}" alt=""
+                        class="relative-img">
+                </div>
+                <div class="relative-details">
+                    <div>
+                        <div class="relative-brand">{{product.brand}}</div>
+                        <div class="relative-product-name">{{product.name}}</div>
+                        <span class="relative-price">${{product.price}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="content">
+            <div class="slider"></div>
+            <div class="subcontent"></div>
+        </div> -->
+    <div id="footer">
+        <div class="footer-icon-row">
+            <div class="footer-icon-row-wrapper">
+                    <div class="footer-column-icon-row">
+                        <div class="footer-column-icon">
+                            <img src="./asset/img/home/footer-no2.png" alt="">
+                        </div>
+                        <div>
+                            <p class="column-title">100% PRICE MATCH GUARANTEE</p>
+                        </div>
+                    </div>
+                    <div class="footer-column-icon-row">
+                        <div class="footer-column-icon">
+                            <img src="./asset/img/home/footer-no1.png" alt="">
+                        </div>
+                        <div>
+                            <p class="column-title">EASY 30 DAY RETURN POLICY</p>
+                        </div>
+                    </div>
+                    <div class="footer-column-icon-row">
+                        <div class="footer-column-icon">
+                            <img src="./asset/img/home/footer-no3.png" alt="">
+                        </div>
+                        <div>
+                            <p class="column-title">FREE SHIPPING OVER $50</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <footer class="final">
+            <div class="footer-content">
+                <div class="footer-content-wrapper">
+                    <div class="footer-social footer-social-menu js-social-menu">
+                        <h6 class="footer-content-title">
+                            HELP & SUPPORT
+                            <span class="footer-content-title-icon">
+                                <i class='js-plus bx bx-plus'></i>
+                                <i class='js-minus bx bx-minus hide'></i>
+                            </span>
+                        </h6>
+                        <ul class="footer-content-list js-footer-content-list " style="max-height:252px ">
+                            <li class="footer-content-item"><a href="./contactUs.html" class="footer-content-link">CONTACT US</a></li>
+                            <li class="footer-content-item"><a href="./Picture_Library.html" class="footer-content-link">PICTURE LIBRARY</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-social footer-social-menu js-social-menu">
+                        <h6 class="footer-content-title">
+                            ABOUT Hudson Furnishing
+                            <span class="footer-content-title-icon">
+                                <i class='js-plus bx bx-plus'></i>
+                                <i class='js-minus bx bx-minus hide'></i>
+                            </span>
+                        </h6>
+                        <ul class="footer-content-list js-footer-content-list" style="max-height:252px">
+                            <li class="footer-content-item"><a href="./about.html" class="footer-content-link">ABOUT US</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-social  footer-social-subscribe-wrapper">
+                        <div class="footer-social-contact">
+                            <h6 class="footer-content-title">TRADE PROGRAM</h6>
+                            <div class="footer-social-contact-text">
+
+
+                            </div>
+                        </div>
+                        <div class="footer-social-subscribe">
+                            <h6 class="footer-content-title">CUSTOMER SERVICE</h6>
+                            <div class="footer-social-subscribe-text">
+                                <p>0783650619 | 6am-9pm<br></p>
+                            </div>
+                        </div>
+                        <div class="footer-social-subscribe">
+                            <h6 class="footer-content-title"></h6>
+                            <div class="footer-social-subscribe-text">
+                                <p><br></p>
+                            </div>
+                        </div>
+                        <div class="footer-social-subscribe">
+                            <ul class="footer-social-list">
+                                <li><a href=""><i class='bx bxl-facebook'></i></a></li>
+                                <li><a href=""><i class='bx bxl-twitter'></i></a></li>
+                                <li><a href=""><i class='bx bxl-instagram'></i></a></li>
+                                <li><a href=""><i class='bx bxl-tiktok'></i></a></li>
+                                <li><a href=""><i class='bx bxl-youtube'></i></a></li>
+                                <li><a href=""><i class='bx bxl-discord-alt'></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-final">
+                <div class="footer-final-wrapper">
+                    <div class="footer-final-content footer-final-content-text">&copy 2001-2023 Hudson Furnishing ·
+                        VietNam , CT </div>
+                    <div class="footer-final-content footer-final-content-text">
+                        <ul class="footer-content-list">
+                            <li><a href="./sitemap.html" class="footer-content-item">Site Map</a></li>
+                                <li><a href="https://aptechcantho.cusc.vn/" class="footer-content-item">Aptech</a></li>
+                               
+
+                        </ul>
+                    </div>
+                    <div class="footer-final-content Khoa">
+                        <div class="footer-final-images">
+                            <a href="" class="footer-final-images-link">
+                                <img src="./asset/img/CUSC.png" alt="" width="140px" height="35px">
+                            </a>
+                            <a href="" class="footer-final-images-link">
+                                <img src="./asset/img/Aptech.jpg" alt="" width="140px" height="35px">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.7934024737046!2d105.77768491476496!3d10.03390029282792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0881f9a732075%3A0xfa43fbeb2b00ca73!2sCUSC%20-%20Cantho%20University%20Software%20Center!5e0!3m2!1svi!2s!4v1674741154911!5m2!1svi!2s"
+                    width="600" height="250px" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+            </div>
+            <div class="icon-return" id="backtop">
+                <i class='bx bxs-arrow-to-top'></i>
+            </div>
+            <!-- Date Actually -->
+            <div class="slider-date">
+                <div class="slider-date-wrapper">
+                <p class="slider-date-wrapper-inner"><span id="date"></span></p>
+                <p class="slider-date-wrapper-inner slider-date-wrapper-inner-location"><span id="GeoLocation"></span></p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <!-- this is sign in -->
+    <div class="modal-sign-in  js-modal-sign-in">
+        <div class="modal-sign-in-container js-modal-sign-in-container">
+            <form action="" id="form-sign-in" class="modal-sign-form ">
+                <div class="modal-sign-in-form-icon js-modal-sign-in-icon-close">
+                    <i class='bx bx-x'></i>
+                </div>
+                <div class="modal-sign-form-header">
+                    <h1 class="modal-sign-form-header-text-header">Sign In</h1>
+                    <p class="modal-sign-form-header-text">Don't have an account yet?</p>
+                    <!-- <button class="modal-sign-form-header-link  ">Sign Up</button> -->
+                    <!-- <a href="/"  class="modal-sign-form-header-link js-sign-up">Sign Up</a> -->
+                </div>
+                <div class="modal-sign-form-body">
+                    <label for="email" class="label-text">Email:</label><br>
+                    <input type="mail" id="mail" class="input-text" required>
+                    <small></small>
+                </div>
+                <div class="modal-sign-form-body">
+                    <label for="password-sign-in" class="label-text">Password:</label><br>
+                    <input type="password" id="password-sign-in" class="input-text" required>
+                    <small></small>
+                </div>
+                <input type="submit" value="Sign in" class="input-submit-btn js-sign-in" onclick="signIn();">
+                <input type="submit" value="Register" class="input-submit-btn js-sign-up">
+                <a href="" class="modal-sign-in-link-forget">forgot password</a>
+            </form>
+        </div>
+    </div>
+    <!-- this is sign up -->
+    <div class="modal-sign-up js-modal-sign-up">
+        <div class="modal-sign-up-container js-modal-sign-up-container">
+            <form action="" class="modal-sign-up-form" name="reform" onsubmit="return register()" >
+                <div class="modal-sign-up-form-icon js-modal-sign-up-icon-close ">
+                    <i class='bx bx-x'></i>
+                </div>
+                <div class="modal-sign-up-form-header">
+                    <h1 class="modal-sign-up-form-header-text-header">Sign Up</h1>
+                </div>
+                <div class="modal-sign-up-form-body">
+                    <label for="first" class="label-text">First Name:</label><br>
+                    <input type="text" placeholder="First Name" id="first" class="input-text" name="first" required>
+                    <small id="fname-error"></small>
+                </div>
+                <div class="modal-sign-up-form-body">
+                    <label for="last" class="label-text">Last Name:</label><br>
+                    <input type="text" placeholder="Last Name" id="last" class="input-text" name="last" required> 
+                    <small id="lname-error"></small>
+                </div>
+                <div class="modal-sign-up-form-body">
+                    <label for="email" class="label-text">Email:</label><br>
+                    <input type="mail" placeholder="Email" id="email" class="input-text" name="email" required >
+                    <small id="email-error"></small>
+                </div>
+                <div class="modal-sign-up-form-body">
+                    <label for="password class="label-text">Password</label><br>
+                    <input type="password" placeholder="Password" id="password" class="input-text" name="password" required>
+                    <small id="password-error"></small>
+                </div>
+
+                <input type="submit" value="Sign Up" class="input-submit-btn"  onclick="Validate();"  >
+            </form>
+        </div>
+    </div>
+    <!-- contact button -->
+    <div class="contact-btn">
+        <div class="contact-icon">
+            <span class="icon-message-open js-icon-message-open"><i class='bx bx-message'></i></span>
+            <span class="icon-message-close js-icon-message-close hide"><i class='bx bx-message-x'></i></span>
+        </div>
+    </div>
+
+
+
+
+    <!-- modal contact  -->
+    <div class="modal-contact js-modal-contact">
+        <div class="modal-contact-container">
+                <div class="modal-contact-container-icon-close js-contact-header-icon-close"><i class='bx bx-x'></i></div>
+                <div class="modal-contact-container-header js-header-contactus  "> <!-- toggle contact us-->
+                    <div class="container-body-wrapper-header-logo">
+                        <img src="./asset/img/Logo.jpg" alt="" class="container-body-wrapper-header-logo-img">
+                    </div>
+                </div>
+                <div class="modal-contact-container-body ">
+                    <div class="box-chat-container js-box-chat hide">  <!-- toggle contact us-->
+                        <div class="box-chat-container-wrapper">
+                            <div class="box-chat-container-inner">
+                                <div class="box-chat-container-content">
+                                    <div class="box-chat-container-content-header">
+                                        <div class="box-chat-container-content-header-wrapper">
+                                            <div class="box-chat-container-content-header-inner">
+                                                <div class="chat-header-content">
+                                                    <div class="chat-header-content-title">
+                                                        <div class="back-chat">
+                                                            <button class="back-chat-btn js-back-chat-btn"><i class='bx bx-chevron-left'></i></button>
+                                                        </div>
+                                                        <h1 class="chat-title-heading">Hudson Chat</h1>
+                                                    </div>
+                                                    <div class="chat-header-content-account">
+                                                        <div class="chat-header-content-account-avatar">
+                                                            <div class="chat-header-content-account-avatar-wrapper">
+                                                                <div class="chat-header-content-account-avatar-inner">
+                                                                    <div class="chat-account-user user1">
+                                                                        <div class="chat-account-user-wrapper">
+                                                                            <div class="chat-account-user-inner"><img src="./asset/img/0x0.png" alt="" class="chat-account-user-avatar"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="chat-account-user user2">
+                                                                        <div class="chat-account-user-wrapper">
+                                                                            <div class="chat-account-user-inner"><img src="./asset/img/0x1.jpg" alt="" class="chat-account-user-avatar"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="chat-account-user user3">
+                                                                        <div class="chat-account-user-wrapper">
+                                                                            <div class="chat-account-user-inner"><img src="./asset/img/0x2.jpg" alt="" class="chat-account-user-avatar"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <h2 class="chat-header-content-account-title">We'll be back online on Monday</h2>
+                                                        <div class="chat-header-content-account-description">
+                                                            <span class="chat-header-content-account-desc">
+                                                                Chat is available during business hours Mon-Fri and you can email us anytime at support@hudson.com. Thanks for stopping by!😀
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box-chat-container-content-body">
+                                        <div class="box-chat-container-content-body-wrapper">
+                                            <div class="box-chat-container-content-body-inner">
+                                                <div class="box-chat-container-content-body-content">
+                                                    <div class="box-chat-container-content-body-content-blank" style="bottom:162px">
+                                                        <div class="box-chat-container-content-body-content-blank-wrapper">
+                                                            <div class="box-chat-container-content-body-content-blank-inner">
+                                                                <div class="box-chat-container-content-body-content-blank-content"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-chat-container-content-body-content-text-box">
+                                                        <div class="box-chat-container-content-body-content-text-box-wrapper">
+                                                            <input type="email" placeholder="khoapham@gmail.com" class="body-content-text-box-input-mail">
+                                                            <input type="text" placeholder="Write your message ..." class="body-content-text-box-enter-message">
+                                                            <div class="body-content-text-box-send-icon">
+                                                                <button class="body-content-text-box-icon"><i class='bx bx-smile'></i></button>
+                                                                <button class="body-content-text-box-send"><i class='bx bx-send' ></i></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="modal-contact-container-body-wrapper js-body-contactus"> <!-- toggle contact us-->
+                        <div class="modal-contact-container-body-wrapper-header">
+                            <div class="container-body-wrapper-header-account">
+                                <div class="header-account-wrapper">
+                                    <div class="header-account account1">
+                                        <div class="header-account-image"><img src="./asset/img/0x0.png" alt=""></div>
+                                    </div>
+                                    <div class="header-account account2">
+                                        <div class="header-account-image"><img src="./asset/img/0x1.jpg" alt=""></div>
+                                    </div>
+                                    <div class="header-account account3">
+                                        <div class="header-account-image"><img src="./asset/img/0x2.jpg" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-contact-container-body-wrapper-help">
+                            <h1 class="wrapper-help-title">Hi THERE !</h1>
+                            <h1 class="wrapper-help-title">HOW CAN WE HELP?</h1>
+                        </div>
+                        <div class="modal-contact-container-body-wrapper-massage">
+                            <div class="modal-contact-container-body-wrapper-massege-wrapper">
+                                <li class="modal-contact-container-body-wrapper-massege-inner js-message-chat">
+                                    <div class="massege-inner-chat">
+                                        <strong>Send Us a Message</strong>
+                                        <p class="massege-inner-chat-desc">We typically reply within a day</p>
+                                    </div>
+                                    <div class="massege-inner-icon-send"><i class='bx bx-send'></i></div>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+     <!-- modal feedback -->
+     <div class="modal-feedback js-feedback">
+        <div class="modal-feedback-container js-feedback-container">
+            <div class="modal-feedback-icon js-feedback-icon-close">
+                <i class='bx bx-x'></i>
+            </div>
+            <form>
+                <h1>Give your Feedback</h1>
+                <div class="id">
+                    <input type="text" placeholder="Full name">
+                    <i class="far fa-user"></i>
+                </div>
+                    <div class="id">
+                    <input type="email" placeholder="Email address">
+                    <i class="far fa-envelope"></i> 
+                </div>
+                    <textarea cols="15" rows="5" placeholder="Enter your opinions here"></textarea>
+                    <input type="submit" value="Submit">
+               
+            </form>
+        </div>
+   </div>
+
+
+
+
+
+
+</body>
+<script>
+
+    // slider detail
+
+    const listDivImg = document.querySelectorAll('.thumbnail-slider-image-wrapper div')
+    const next = document.querySelector('.detail-thumbnail-icon-left')
+    const prev = document.querySelector('.detail-thumbnail-icon-right')
+    const imgWrap = document.querySelector('.detail-img-main-wrapper img')
+
+    let currentIndex = 0
+
+    setCurrent(currentIndex)
+
+    function setCurrent(index) {
+        currentIndex = index
+        imgWrap.src = listDivImg[currentIndex].querySelector('img').src
+
+        // remove all active img
+        listDivImg.forEach((item) => {
+            item.classList.remove('active')
+        })
+
+        // set active
+        listDivImg[currentIndex].classList.add('active')
+    }
+
+    listDivImg.forEach((img, index) => {
+        img.addEventListener('click', (e) => {
+            setCurrent(index)
+        })
+    })
+
+    next.addEventListener('click', () => {
+        if (currentIndex == listDivImg.length - 1) {
+            currentIndex = 0
+        } else currentIndex++
+
+        setCurrent(currentIndex)
+    })
+
+    prev.addEventListener('click', () => {
+        if (currentIndex == 0) currentIndex = listDivImg.length - 1
+        else currentIndex--
+
+        setCurrent(currentIndex)
+    });
+</script>
+<script src="./js/app.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"></script>
+<script>
+    // this is jQuery
+    // function back to top
+    $(document).ready(function () {
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 40) {
+                $("#backtop").fadeIn();
+            } else {
+                $("#backtop").fadeOut();
+            }
+        });
+
+        $("#backtop").click(function () {
+            $("html,body").animate({ scrollTop: 0 }, 1000);
+        });
+    });
+</script>
+<script>
+    const backChatBtn = document.querySelector(".js-back-chat-btn");
+    const toggleMessage = document.querySelector(".js-message-chat");
+    const toggleSend = document.querySelector(".massege-inner-icon-send");
+    const headerContactUS = document.querySelector(".js-header-contactus");
+    const bodyContactUS = document.querySelector(".js-body-contactus");
+    const boxChat = document.querySelector(".js-box-chat");
+
+    toggleMessage.addEventListener('click',()=>{
+        boxChat.classList.remove("hide");
+        bodyContactUS.classList.add("hide");
+        headerContactUS.classList.add("hide");
+    });
+    backChatBtn.addEventListener("click",()=>{
+        boxChat.classList.add("hide");
+        bodyContactUS.classList.remove("hide");
+        headerContactUS.classList.remove("hide");
+    })
+</script>
+<script>
+    const openFilterBtn = document.querySelector(".js-open-filter");
+    const sidebar = document.querySelector(".grid-item-sidebar-filter");
+    const closeFilterBtn = document.querySelector(".js-close-btn");
+    const downBtn = document.querySelector(".down");
+    const upBtn = document.querySelector(".up");
+    const dropdown = document.querySelector(".grid-item-sidebar-filter-content-item-dropdown")
+
+    openFilterBtn.addEventListener("click", () => {
+        sidebar.classList.add("is-active");
+    });
+    closeFilterBtn.addEventListener("click", () => {
+        sidebar.classList.remove("is-active");
+    });
+
+    downBtn.addEventListener("click", () => {
+        dropdown.classList.remove("")
+        downBtn.classList.add("hide");
+        upBtn.classList.remove("hide");
+    });
+    upBtn.addEventListener("click", () => {
+        downBtn.classList.remove("hide");
+        upBtn.classList.add("hide");
+    })
+</script>
+<script>
+    var today = new Date();
+    var date = (+ today.getHours() +":" +today.getMinutes() +"&nbsp;&nbsp;" + (today.getMonth()+1) +"/" + today.getDate() +"/" + today.getFullYear());
+    document.getElementById("date").innerHTML = date;
+
+    var x = document.getElementById("GeoLocation");
+        function getLocation() {
+        if (local.geolocation) {
+            local.geolocation.watchPosition(showPosition);
+        } else {
+            x.innerHTML = "Browser does not support.";
+        }
+        }
+        function showPosition(location) {
+        x.innerHTML = "Latitude: " + location.coords.latitude +
+        "&nbsp;&nbsp;Longitude: " + location .coords.longitude;
+        }
+        getLocation();
+</script>
+<script>
+    document.getElementById("link-label").onkeyup = function () {
+        if (document.getElementById("link-label").value == '') document.getElementById("suggest-result").style.display = 'none';
+        else document.getElementById("suggest-result").style.display = 'flex';
+    }
+    document.getElementById("khoa-handsome").onkeyup = function () {
+        if (document.getElementById("khoa-handsome").value == '') document.getElementById("suggest-result2").style.display = 'none';
+        else document.getElementById("suggest-result2").style.display = 'flex';
+    }
+</script>
+<script>
+
+
+    var email = document.forms['reform']['email'];
+    var fname = document.forms['reform']['fname'];
+    var lname = document.forms['reform']['lname'];
+    var password = document.forms['reform']['password'];
+    var password_confirm = document.forms['reform']['confirm'];
+    
+    var fname_error = document.getElementById('fname-error');
+    var lname_error = document.getElementById('lname-error');
+    var email_error = document.getElementById('email-error');
+    var password_error = document.getElementById('password-error');
+    var confirm_error = document.getElementById('confirm-error');
+    
+    
+    email.addEventListener('blur', emailVerify, true);
+    password.addEventListener('blur', passwordVerify, true);
+    
+    function Validate() {
+        
+    
+    
+        if (email.value == "") {
+            email.style.border = "1px solid red";
+            document.getElementById('email').style.color = "red";
+            email_error.textContent = "Email is required";
+            email.focus();
+            return false;
+        }
+    
+        if (password.value == "") {
+            password.style.border = "1px solid red";
+            document.getElementById('password').style.color = "red";
+            password_error.textContent = "Password is required";
+            password.focus();
+            return false;
+        }
+    }
+    
+    function emailVerify() {
+        if (email.value != "") {
+            email.style.border = "1px solid #5e6e66";
+            document.getElementById('email').style.color = "#5e6e66";
+            email_error.innerHTML = "";
+            return true;
+        }
+    }
+    function passwordVerify() {
+        if (password.value != "") {
+            password.style.border = "1px solid #5e6e66";
+            document.getElementById('password').style.color = "#5e6e66";
+            password_error.innerHTML = "";
+            return true;
+        }
+    
+    }
+    
+    </script>
+    <script>
+        // modal feedback 
+     
+     const modalFeedback = document.querySelector('.js-feedback');
+     const modalFeedbackContainer = document.querySelector('.js-feedback-container');
+     const modalFeedbackIconClose = document.querySelector('.js-feedback-icon-close');
+     const openModalBtn = document.querySelector('.js-feedback-btn');
+     
+     
+     
+     function showFeedback(){
+         modalFeedback.classList.add("extend");
+     }
+     function hideFeedback(){
+         modalFeedback.classList.remove("extend");
+     }
+     openModalBtn.addEventListener("click",showFeedback);
+     modalFeedbackIconClose.addEventListener("click",hideFeedback);
+     modalFeedback.addEventListener("click",hideFeedback);
+     modalFeedbackContainer.addEventListener("click",function(event){
+         event.stopPropagation()
+     });
+     document.addEventListener('keydown', (e) => {
+         if (e.keyCode == 27){
+             modalFeedback.classList.remove('extend');
+         } 
+     }); 
+     </script>
+</html>

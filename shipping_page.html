@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hudson Furnishing | Shipping </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!--icon.css-->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script><!--control date_input.js-->
+  <script src="./js/AngularJS/angular.min.js"></script><!--angular.js src-->
+  <link rel="icon" href="./asset/fonts/favicon_io/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <link rel="stylesheet" href="./asset/css/shiping_page.css">
+</head>
+<body>
+  <header>
+    <div id="header">
+        <div class="container">
+            <div class="container-wrapper">
+                <button class="header-menu-btn">
+                    <div class="header-menu-btn-icon">
+                        <span class="icon-open js-open"><i class='bx bx-menu'></i></span>
+                        <span class="icon-close hide js-close"><i class='bx bx-x'></i></span>
+                    </div>
+                </button>
+                <h1 class="header-logo">
+                    <a href="/" class="header-logo-image">
+                        <img class="image" src="./asset/img/Logo.jpg" alt="">
+                    </a>
+                </h1>
+                <div class="header-search hidden-search">
+                    <form action="" class="header-search-wrapper" >
+                        <label for="link-label" class="label-hidden">Search</label>
+                        <input type="hidden" autocomplete="off">
+                        <input type="search" placeholder="Search"  class="header-search-input" id="link-label">
+                        <button  type="submit" class="header-search-btn">
+                            <span><i class='bx bx-search'></i></span>
+                        </button>
+                    </form>
+                </div>
+                <div class="header-action-wrapper">
+                    <ul class="header-action">
+                        <li class="header-action-item"><a href="./feedback2.html" class="link-action"><i
+                                    class='bx bx-pencil'></i><span class="header-action-text-hidden">Feed
+                                    Back</span></a></li>
+                        <li class="header-action-item js-sign-in"><a href="" class="link-action"><i
+                                    class='bx bx-user-circle'></i><span class="header-action-text-hidden">Sign
+                                    In</span></a></li>
+                        <li class="header-action-item "><a href="./shipping_page.html"
+                                class="link-action link-action-cart-active"><i class='bx bx-cart'></i><span
+                                    class="header-action-text-hidden">My Cart</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-wrapper">
+            <div class="header-navbar">
+                <ul class="header-navbar-list">
+                    <li class="header-navbar-item">
+                        <a href="./home.html" class="header-navbar-link">Home</a>
+                    </li>
+                    <li class="header-navbar-item">
+                        <a href="./furniture.html" class="header-navbar-link">Furniture</a>
+                    </li>
+                    <li class="header-navbar-item">
+                        <a href="./homeOffice.html" class="header-navbar-link">Home Office</a>
+                    </li>
+                    <li class="header-navbar-item">
+                        <a href="./Livingroom.html" class="header-navbar-link">Living Room</a>
+                    </li>
+                    <li class="header-navbar-item">
+                        <a href="./Bedroom.html" class="header-navbar-link">Bed Room</a>
+                    </li>
+                    <li class="header-navbar-item">
+                        <a href="./DiningRoom.html" class="header-navbar-link">Dining Room</a>
+                    </li>
+                    <li class="header-navbar-item">
+                        <a href="./Outdoor.html" class="header-navbar-link">Outdoor</a>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+        <div id="header-search" class="header-sub-search-wrapper">
+            <div class="header-sub-search">
+                <form action="">
+                    <input type="hidden" autocomplete="off">
+                    <input type="search" class="header-sub-search-input" placeholder="Search" autocomplete="off">
+                    <div></div>
+                    <button type="submit" class="header-sub-search-btn">
+                        <span><i class='search-icon bx bx-search'></i></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="navigation-sub-wrapper js-taskbar is-active">
+            <nav class="header-sub-navbar">
+                <ul class="header-sub-navbar-list">
+                    <li class="header-sub-navar-item">
+                        <a href="" class="header-sub-navbar-link">
+                            <span class="header-sub-navbar-label">Home</span>
+                            <div class="header-sub-navbar-icon">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </a>
+                        <div class="header-sub-navbar-dropdown"></div>
+                    </li>
+                    <li class="header-sub-navar-item">
+                        <a href="" class="header-sub-navbar-link">
+                            <span class="header-sub-navbar-label">Furniture</span>
+                            <div class="header-sub-navbar-icon">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </a>
+                        <div class="header-sub-navbar-dropdown"></div>
+                    </li>
+                    <li class="header-sub-navar-item">
+                        <a href="" class="header-sub-navbar-link">
+                            <span class="header-sub-navbar-label">Home Office</span>
+                            <div class="header-sub-navbar-icon">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </a>
+                        <div class="header-sub-navbar-dropdown"></div>
+                    </li>
+                    <li class="header-sub-navar-item">
+                        <a href="" class="header-sub-navbar-link">
+                            <span class="header-sub-navbar-label">Living Room</span>
+                            <div class="header-sub-navbar-icon">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </a>
+                        <div class="header-sub-navbar-dropdown"></div>
+                    </li>
+                    <li class="header-sub-navar-item">
+                        <a href="" class="header-sub-navbar-link">
+                            <span class="header-sub-navbar-label">Bed Room</span>
+                            <div class="header-sub-navbar-icon">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </a>
+                        <div class="header-sub-navbar-dropdown"></div>
+                    </li>
+                    <li class="header-sub-navar-item">
+                        <a href="" class="header-sub-navbar-link">
+                            <span class="header-sub-navbar-label">Dining Room</span>
+                            <div class="header-sub-navbar-icon">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </a>
+                        <div class="header-sub-navbar-dropdown"></div>
+                    </li>
+                    <li class="header-sub-navar-item">
+                        <a href="" class="header-sub-navbar-link">
+                            <span class="header-sub-navbar-label">OutDoor</span>
+                            <div class="header-sub-navbar-icon">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </a>
+                        <div class="header-sub-navbar-dropdown"></div>
+                    </li>
+                    <li class="header-sub-navar-item">
+                        <a href="" class="header-sub-navbar-link">
+                            <span class="header-sub-navbar-label">More</span>
+                            <div class="header-sub-navbar-icon">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </a>
+                        <div class="header-sub-navbar-dropdown"></div>
+                    </li>
+                </ul>
+                <div class="header-bottom-sub-navbar">
+                    <ul class="header-bottom-sub-navbar-action">
+                        <li class="header-bottom-sub-navbar-action-item">
+                            <a href="" class="header-bottom-sub-navbar-action-link">
+                                <i class='bx bx-user-circle'></i>
+                                <span>Sign In</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header-bottom-sub-navbar-shopinfo">
+                        <div class="header-bottom-sub-navbar-shopinfo-title">Need Help? Contact Us</div>
+                        <div class="header-bottom-sub-navbar-shopinfo-phone">
+                            <a href="">0783650619</a>
+                        </div>
+                        <div class="header-bottom-sub-navbar-shopinfo-openhours">7am - 9pm</div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+  </header><br><br><br><br><br><br><br><br>
+  <div>
+    <section ng-app="MyApp" ng-controller="MyController">
+      <nav>
+        <form name="MyForm" ng-submit="MyForm.$valid" novalidate>
+          <div class="boxshadow"><!--contain the form-->
+            SHIPPING ADDRESS
+            <hr>
+            <table>
+              <tr>
+                <div class="emailinput">
+                  <label>EMAIL ADDRESS<span class="required">&nbsp;*</span></label><br>
+                  <div class="inputbox" style="width:100%;min-width: none;max-width: 460px;">
+                    <input type="email" ng-model="EmailAddress" id="email" name="Email" style="width:calc(100% - 30px);height:40px;"
+                      required placeholder="example@domain.com"><!--input email-->
+                    <i class="glyphicon glyphicon-question-sign"
+                      onclick="showex()"></i><!--onclick the incon to show explan-->
+                    <div id="myDropdown" class="dropdown-content"><!--contain content explan-->
+                      <a id="explain">We'll send your order confirmation here</a>
+                    </div>
+                  </div>
+                  <div ng-show="MyForm.$submitted || MyForm.Email.$touched">
+                    <span ng-style="errornote" ng-show="MyForm.Email.$error.email">Please enter a valid email address (Ex:
+                      johndoe@domain.com).</span>
+                  </div><!--contain content will dropdown when the show with conditioin is true-->
+                  <div ng-show="MyForm.$submitted || MyForm.Email.$touched">
+                    <span ng-style="errornote" ng-show="MyForm.Email.$error.required">This is a required field.</span>
+                  </div>
+                </div>
+              </tr>
+              <tr>
+                <td>
+                  <label>FIRST NAME<span class="required">&nbsp;*</span></label><br>
+                  <input ng-model="user.fname" name="fname" id="fname" type="text" required>
+                  <div ng-show="MyForm.$submitted || MyForm.fname.$touched">
+                    <span ng-style="errornote" ng-show="MyForm.fname.$error.required">This is a required field.</span>
+                  </div>
+                </td>
+                <td>
+                  <label>LAST NAME<span class="required">&nbsp;*</span></label><br>
+                  <input ng-model="user.lname" name="lname" id="lname" type="text" required><br>
+                  <div ng-show="MyForm.$submitted || MyForm.lname.$touched">
+                    <span ng-style="errornote" ng-show="MyForm.lname.$error.required">This is a required field.</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>COMPANY</label><br>
+                  <input type="text"><br>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>STREET ADDRESS<span class="required">&nbsp;*</span></label><br>
+                  <input ng-model="address" name="address" id="address" type="text" required><br>
+                  <div ng-show="MyForm.$submitted || MyForm.address.$touched">
+                    <span ng-style="errornote" ng-show="MyForm.address.$error.required">This is a required field.</span>
+                  </div>
+                </td>
+                <td>
+                  <label>STREET ADDRESS 2</label><br>
+                  <input type="text"><br>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>STREET ADDRESS 3</label><br>
+                  <input type="text"><br>
+              </tr>
+              <tr>
+                <td>
+                  <label>COUNTRY<span class="required">&nbsp;*</span></label><br>
+                  <input ng-model="country" name="country" id="country" list="listcountry" type="text" required>
+                  <datalist id="listcountry" role="listbox"><!--list country-->
+                    <option value="VIETNAM">VIETNAM</option>
+                    <option value="INDIA">INDIA</option>
+                    <option value="USA">USA</option>
+                  </datalist><br>
+                  <div ng-show="MyForm.$submitted || MyForm.country.$touched">
+                    <span ng-style="errornote" ng-show="MyForm.country.$error.required">This is a required field.</span>
+                  </div>
+                </td>
+                <td>
+                  <label>STATE/PROVINCE/CITY<span class="required">&nbsp;*</span></label><br>
+                  <input ng-model="place" id="place" name="place" list="s/t/c" autocomplete="off" name="s/t/c"  required>
+                  <datalist id="s/t/c" role="listbox"><!--list place-->
+                    <option value="HA NOI">HA NOI</option>
+                    <option value="HO CHI MINH CITY">HO CHI MINH CITY</option>
+                    <option value="HAI PHONG">HAI PHONG</option>
+                    <option value="DA NANG">DA NANG</option>
+                    <option value="CAN THO">CAN THO</option>
+                    <option value="MUMBAI">MUMBAI</option>
+                    <option value="SURAT">SURAT</option>
+                    <option value="NEW DELHI">NEW DELHI</option>
+                    <option value="HYDERABAD">HYDERABAD</option>
+                    <option value="PUNE">PUNE</option>
+                    <option value="NEW YORK">NEW YORK</option>
+                    <option value="WASHINGTON">WASHINGTON</option>
+                    <option value="CALIFORNIA">CALIFORNIA</option>
+                    <option value="MASSACHUSETTS">MASSACHUSETTS</option>
+                    <option value="CONNECTICUT">CONNECTICUT</option>
+                  </datalist><br>
+                  <div ng-show="MyForm.$submitted || MyForm.place.$touched">
+                    <span ng-style="errornote" ng-show="MyForm.place.$error.required">This is a required field.</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>ZIP/POSTAL CODE<span class="required">&nbsp;*</span></label><br>
+                  <input ng-model="postcode" id="postcode" name="postcode" type="text" required><br>
+                  <div ng-show="MyForm.$submitted || MyForm.postcode.$touched">
+                    <span ng-style="errornote" ng-show="MyForm.postcode.$error.required">Your email address is not
+                      empty</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>PHONE NUMBER<span class="required">&nbsp;*</span></label><br>
+                  <div class="inputbox">
+                    <input ng-model="phonenum" name="phonenum" id="phone" type="tel"
+                      name="phone"
+                      required /><!--input nuber phone--><!--only for chrome,microsoft edge 10.0,Firefox,safari,opera 11.0-->
+                    <i class="glyphicon glyphicon-question-sign"
+                      onclick="showex2()"></i><!--onclick the incon to show explan-->
+                    <div id="myDropdown2" class="dropdown-content2">
+                      <a>For delivary questions</a>
+                    </div>
+                  </div>
+                  <div ng-show="MyForm.$submitted || MyForm.phonenum.$touched">
+                    <span ng-style="errornote" ng-show="MyForm.phonenum.$error.required">This is a required field.</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <br><br>
+          <div class="boxshadow">
+            <label>SHIPPING METHODS</label>
+            <hr>
+            <input type="radio" id="pickatwarehouse">&nbsp;$0.00&nbsp;
+            <label>PICKUP AT WAREHOUSE</label>
+            <div id="note">If you pick up at the warehouse, the shipping fee will be waived,
+              if you don't choose
+              to pick it up,
+              please leave your time schedule below so we can deliver it when you are home.
+            </div>
+            <label>YOUR SCHEDULE DATE</label>
+            <div class="inputbox" style="width:220px;">
+              <input autocomplete="off" ng-model="date" id="datepicker" style="width:190px;height:40px;" type="text"
+                name="phone" />
+              <i class="glyphicon glyphicon-calendar"></i>
+              <div id="myDropdown2" class="dropdown-content2">
+                <a>For delivary questions</a>
+              </div>
+            </div>
+          </div><br><br>
+          <div class="controllbtn">
+            <span><input type="submit" id="backbtn" value="BACK">&nbsp;</span>
+            <span onclick="nextpage()"><input type="submit" value="NEXT" id="nextbtn" onclick="save()"></span>
+            <br></br>
+          </div>
+        </form>
+      </nav>
+      <article>
+        <div>
+          <div>
+            <span class="ordersummarythum">Order Summary</span>
+            <hr>
+            <div class="listpro">
+              <div>
+                <div ng-repeat="personalDetail in personalDetails">
+                  <div><img id="propic" src="{{personalDetail.pic}}" style="height: 200px;"></div>
+                  <div>{{personalDetail.proid}}</div>
+                  <div>{{personalDetail.proname}}</div>
+                  <div>{{personalDetail.price}}$</div>
+                  <span ng-click="removeItem($index)" class="glyphicon glyphicon-trash"></span><br>
+                  <hr>
+                </div>
+                Total Money : {{totalmoney}}$
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      </secion>
+  </div>
+  <footer>
+    <div id="footer">
+      <div class="footer-icon-row">
+        <div class="footer-icon-row-wrapper">
+          <div class="footer-column-icon-row">
+              <div class="footer-column-icon">
+                  <img src="./asset/img/home/footer-no2.png" alt="">
+              </div>
+              <div>
+                  <p class="column-title">100% PRICE MATCH GUARANTEE</p>
+              </div>
+          </div>
+          <div class="footer-column-icon-row">
+              <div class="footer-column-icon">
+                  <img src="./asset/img/home/footer-no1.png" alt="">
+              </div>
+              <div>
+                  <p class="column-title">EASY 30 DAY RETURN POLICY</p>
+              </div>
+          </div>
+          <div class="footer-column-icon-row">
+              <div class="footer-column-icon">
+                  <img src="./asset/img/home/footer-no3.png" alt="">
+              </div>
+              <div>
+                  <p class="column-title">FREE SHIPPING OVER $50</p>
+              </div>
+          </div>
+      </div>
+      </div>
+      <footer class="final">
+          <div class="footer-content">
+              <div class="footer-content-wrapper">
+                  <div class="footer-social footer-social-menu js-social-menu">
+                      <h6 class="footer-content-title">  
+                          HELP & SUPPORT
+                          <span class="footer-content-title-icon">
+                              <i class='js-plus bx bx-plus'></i>
+                              <i class='js-minus bx bx-minus hide'></i>
+                          </span>
+                      </h6>
+                      <ul class="footer-content-list js-footer-content-list "style="max-height:252px ">
+                          <li class="footer-content-item"><a href="" class="footer-content-link">CONTACT US</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-social footer-social-menu js-social-menu">
+                      <h6 class="footer-content-title">
+                          ABOUT Hudson Furnishing 
+                          <span class="footer-content-title-icon">
+                              <i class='js-plus bx bx-plus'></i>
+                              <i class='js-minus bx bx-minus hide'></i>
+                          </span>
+                      </h6>
+                      <ul class="footer-content-list js-footer-content-list" style="max-height:252px">
+                          <li class="footer-content-item"><a href="" class="footer-content-link">ABOUT US</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-social  footer-social-subscribe-wrapper">
+                      <div class="footer-social-contact">
+                          <h6 class="footer-content-title">TRADE PROGRAM</h6>
+                          <div class="footer-social-contact-text">
+                             
+                              
+                          </div>
+                      </div>
+                      <div class="footer-social-subscribe">
+                          <h6 class="footer-content-title">CUSTOMER SERVICE</h6>
+                          <div class="footer-social-subscribe-text">
+                              <p>0783650619 | 6am-9pm<br></p>
+                          </div>
+                      </div>
+                      <div class="footer-social-subscribe">
+                          <h6 class="footer-content-title"></h6>
+                          <div class="footer-social-subscribe-text">
+                              <p><br></p>
+                          </div>
+                      </div>
+                      <div class="footer-social-subscribe">
+                          <ul class="footer-social-list">
+                              <li><a href=""><i class='bx bxl-facebook'></i></a></li>
+                              <li><a href=""><i class='bx bxl-twitter' ></i></a></li>
+                              <li><a href=""><i class='bx bxl-instagram' ></i></a></li>
+                              <li><a href=""><i class='bx bxl-tiktok' ></i></a></li>
+                              <li><a href=""><i class='bx bxl-youtube' ></i></a></li>
+                              <li><a href=""><i class='bx bxl-discord-alt' ></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="footer-final">
+              <div class="footer-final-wrapper">
+                  <div class="footer-final-content footer-final-content-text">&copy 2001-2023 Hudson Furnishing · VietNam , CT </div>
+                  <div class="footer-final-content footer-final-content-text">
+                      <ul class="footer-content-list">
+                          <li><a href="" class="footer-content-item">Site Map</a></li>
+                          <li><a href="" class="footer-content-item">Aptech</a></li>
+                          
+                      </ul>
+                  </div>
+                  <div class="footer-final-content Khoa">
+                      <div class="footer-final-images">
+                          <a href="" class="footer-final-images-link">
+                              <img src="./asset/img/CUSC.png" alt="" width="140px" height="35px">
+                          </a>
+                          <a href="" class="footer-final-images-link">
+                              <img src="./asset/img/Aptech.jpg" alt="" width="140px" height="35px">
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.7934024737046!2d105.77768491476496!3d10.03390029282792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0881f9a732075%3A0xfa43fbeb2b00ca73!2sCUSC%20-%20Cantho%20University%20Software%20Center!5e0!3m2!1svi!2s!4v1674741154911!5m2!1svi!2s" width="600" height="250px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="icon-return" id="backtop">
+              <i class='bx bxs-arrow-to-top'></i>
+          </div>
+      </footer>
+  </div>
+  </footer>
+    <script src="./js/shipping_page.js">//main javascript script
+    </script>
+    <script>
+      function showex() {
+        document.getElementById("myDropdown").classList.toggle("show");//explain for email
+      }
+      function showex2() {
+        document.getElementById("myDropdown2").classList.toggle("show2");//explain for number phone
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script>
+        // this is jQuery
+        // function back to top
+        $(document).ready(function(){ 
+            
+          $(window).scroll(function(){
+            if($(this).scrollTop() >40 ){
+                $("#backtop").fadeIn();
+            }else{
+                $("#backtop").fadeOut();
+            }
+          });
+    
+            $("#backtop").click(function(){
+                $("html,body").animate({scrollTop: 0},1000);
+            });
+        });
+    </script>
+</body>
+</html>

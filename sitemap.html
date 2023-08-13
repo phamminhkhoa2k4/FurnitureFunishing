@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./asset/css/sitemap.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="./asset/fonts/favicon_io/favicon.ico">
+    <script src="./js/AngularJS/angular.min.js"></script>
+    <script src="./js/AngularJS/angular-route.js"></script>
+    <title>Hudson Furnishing | Home </title>
+</head>
+<body ng-app="myApp">
+        <div id="header">
+            <div class="container">
+                <div class="container-wrapper">
+                    <button class="header-menu-btn">
+                        <div class="header-menu-btn-icon">
+                            <span class="icon-open js-open"><i class='bx bx-menu'></i></span>
+                            <span class="icon-close hide js-close"><i class='bx bx-x'></i></span>
+                        </div>
+                    </button>
+                    <h1 class="header-logo">
+                        <a href="./home.html" class="header-logo-image">
+                            <img class="image" src="./asset/img/Logo.jpg" alt="">
+                        </a>
+                    </h1>
+                    <div class="header-search hidden-search">
+                        <form action="" class="header-search-wrapper" >
+                            <label for="link-label" class="label-hidden">Search</label>
+                            <input type="hidden" autocomplete="off">
+                            <input type="search" placeholder="Search"  class="header-search-input" id="link-label">
+                            <button  type="submit" class="header-search-btn">
+                                <span><i class='bx bx-search'></i></span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="header-action-wrapper">
+                        <ul class="header-action">
+                            <li class="header-action-item"><a href="./feedback2.html" class="link-action"><i class='bx bx-pencil'></i><span class="header-action-text-hidden">Feed Back</span></a></li>
+                            <li class="header-action-item js-sign-in"><a href="#" class="link-action"><i class='bx bx-user-circle'></i><span class="header-action-text-hidden">Sign In</span></a></li>
+                            <li class="header-action-item "><a href="./shiping_page.html" class="link-action link-action-cart-active"><i class='bx bx-cart'></i><span class="header-action-text-hidden">My Cart</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation-wrapper">
+                <nav class="header-navbar">
+                    <ul class="header-navbar-list">
+                        <li class="header-navbar-item">
+                            <a href="./home.html" class="header-navbar-link">Home</a>
+                        </li>
+                        <li class="header-navbar-item">
+                            <a href="./furniture.html" class="header-navbar-link">Furniture</a>
+                        </li>
+                        <li class="header-navbar-item">
+                            <a href="./homeOffice.html" class="header-navbar-link">Home Office</a>
+                        </li>
+                        <li class="header-navbar-item">
+                            <a href="./Livingroom.html" class="header-navbar-link">Living Room</a>
+                        </li>
+                        <li class="header-navbar-item">
+                            <a href="./Bedroom.html" class="header-navbar-link">Bed Room</a>
+                        </li>
+                        <li class="header-navbar-item">
+                            <a href="./DiningRoom.html" class="header-navbar-link">Dining Room</a>
+                        </li>
+                        <li class="header-navbar-item">
+                            <a href="./Outdoor.html" class="header-navbar-link">Outdoor</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div> 
+            <div id="header-search" class="header-sub-search-wrapper">
+                <div class="header-sub-search">
+                    <form action="">
+                        <input type="hidden" autocomplete="off">
+                        <input type="search" class="header-sub-search-input" placeholder="Search" autocomplete="off">
+                        <div></div>
+                        <button type="submit" class="header-sub-search-btn">
+                            <span><i class='search-icon bx bx-search'></i></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="navigation-sub-wrapper js-taskbar is-active">
+                <nav class="header-sub-navbar">
+                    <ul class="header-sub-navbar-list">
+                        <li class="header-sub-navar-item">
+                            <a href="./home.html" class="header-sub-navbar-link">
+                                <span class="header-sub-navbar-label">Home</span>
+                                <div class="header-sub-navbar-icon">
+                                    <i class='bx bx-chevron-right'></i>
+                                </div>
+                            </a>
+                            <div class="header-sub-navbar-dropdown"></div>
+                        </li>
+                        <li class="header-sub-navar-item">
+                            <a href="./furniture.html" class="header-sub-navbar-link">
+                                <span class="header-sub-navbar-label">Furniture</span>
+                                <div class="header-sub-navbar-icon">
+                                    <i class='bx bx-chevron-right'></i>
+                                </div>
+                            </a>
+                            <div class="header-sub-navbar-dropdown"></div>
+                        </li>
+                        <li class="header-sub-navar-item">
+                            <a href="./homeOffice.html" class="header-sub-navbar-link">
+                                <span class="header-sub-navbar-label">Home Office</span>
+                                <div class="header-sub-navbar-icon">
+                                    <i class='bx bx-chevron-right'></i>
+                                </div>
+                            </a>
+                            <div class="header-sub-navbar-dropdown"></div>
+                        </li>
+                        <li class="header-sub-navar-item">
+                            <a href="./livingroom.html" class="header-sub-navbar-link">
+                                <span class="header-sub-navbar-label">Living Room</span>
+                                <div class="header-sub-navbar-icon">
+                                    <i class='bx bx-chevron-right'></i>
+                                </div>
+                            </a>
+                            <div class="header-sub-navbar-dropdown"></div>
+                        </li>
+                        <li class="header-sub-navar-item">
+                            <a href="./Bedroom.html" class="header-sub-navbar-link">
+                                <span class="header-sub-navbar-label">Bed Room</span>
+                                <div class="header-sub-navbar-icon">
+                                    <i class='bx bx-chevron-right'></i>
+                                </div>
+                            </a>
+                            <div class="header-sub-navbar-dropdown"></div>
+                        </li>
+                        <li class="header-sub-navar-item">
+                            <a href="./Diningroom.html" class="header-sub-navbar-link">
+                                <span class="header-sub-navbar-label">Dining Room</span>
+                                <div class="header-sub-navbar-icon">
+                                    <i class='bx bx-chevron-right'></i>
+                                </div>
+                            </a>
+                            <div class="header-sub-navbar-dropdown"></div>
+                        </li>
+                        <li class="header-sub-navar-item">
+                            <a href="./Outdoor.html" class="header-sub-navbar-link">
+                                <span class="header-sub-navbar-label">OutDoor</span>
+                                <div class="header-sub-navbar-icon">
+                                    <i class='bx bx-chevron-right'></i>
+                                </div>
+                            </a>
+                            <div class="header-sub-navbar-dropdown"></div>
+                        </li>
+                    </ul>
+                    <div class="header-bottom-sub-navbar">
+                        <ul class="header-bottom-sub-navbar-action">
+                            <li class="header-bottom-sub-navbar-action-item">
+                                <a href="" class="header-bottom-sub-navbar-action-link">
+                                    <i class='bx bx-user-circle'></i>
+                                    <span>Sign In</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="header-bottom-sub-navbar-shopinfo">
+                            <div class="header-bottom-sub-navbar-shopinfo-title">Need Help? Contact Us</div>
+                            <div class="header-bottom-sub-navbar-shopinfo-phone">
+                                <a href="">0783650619</a>
+                            </div>
+                            <div class="header-bottom-sub-navbar-shopinfo-openhours">7am - 9pm</div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- content-main -->
+        <div id="main">
+            <div >
+                <div class="sitemap">
+                    <div class="sitemap-wrapper">
+                        <div class="sitemap-inner">
+                            <h1 class="sitemap-title">Sitemap</h1>
+                            <div class="sitemap-content">
+                                <div class="sitemap-container">
+                                    <h2 class="sitemap-subtitle">General Pages</h2>
+                                    <ul class="sitemap-list">
+                                        <li class="sitemap-item"><a href="./home.html" class="sitemap-link">Home</a></li>
+                                        <li class="sitemap-item"><a href="./furniture.html" class="sitemap-link">Furniture</a></li>
+                                        <li class="sitemap-item"><a href="./homeOffice.html" class="sitemap-link">Home Office</a></li>
+                                        <li class="sitemap-item"><a href="./livingroom.html" class="sitemap-link">Living Room</a></li>
+                                        <li class="sitemap-item"><a href="./Bedroom.html" class="sitemap-link">Bedroom</a></li>
+                                        <li class="sitemap-item"><a href="./Diningroom.html" class="sitemap-link">Dining Room</a></li>
+                                        <li class="sitemap-item"><a href="./Outdoor.html" class="sitemap-link">Outdoor</a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="sitemap-subtitle">Furniture</h2>
+                                <ul class="sitemap-list">
+                                    <li class="sitemap-item"><a href="./homeOffice.html" class="sitemap-link">Home Office</a></li>
+                                    <li class="sitemap-item"><a href="./livingroom.html" class="sitemap-link">Living Room</a></li>
+                                    <li class="sitemap-item"><a href="./Bedroom.html" class="sitemap-link">Bedroom</a></li>
+                                    <li class="sitemap-item"><a href="./Diningroom.html" class="sitemap-link">Dining Room</a></li>
+                                    <li class="sitemap-item"><a href="./Outdoor.html" class="sitemap-link">Outdoor</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">Sofas</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">Lounge Chairs</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">Coffee Tables</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">Side & Accent Table</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">Dining Tables</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">Dining Chairs</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">Bar & Counter Stools</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">Sideboards & buffets</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">Desks</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">Desk chairs</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">Benches</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">TV & Media Consoles</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">Beds</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">dressers</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">Nightstands</a></li>
+                                </ul>
+                                <h2 class="sitemap-subtitle">Home</h2>
+                                <ul class="sitemap-list">
+                                    <li class="sitemap-item"><a href="./feedback2.html" class="sitemap-link">Feed Back</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">Sign In</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">Sign Up</a></li>
+                                    <li class="sitemap-item"><a href="./shipping_page.html" class="sitemap-link">My Cart</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">Search</a></li>
+                                    <li class="sitemap-item"><a href="./sitemap.html" class="sitemap-link">Site Map</a></li>
+                                    <li class="sitemap-item"><a href="./contactUs.html" class="sitemap-link">Contact Us</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">About Us</a></li>
+                                    <li class="sitemap-item"><a href="" class="sitemap-link">Google Map</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="footer-icon-row">
+                <div class="footer-icon-row-wrapper">
+                    <div class="footer-column-icon-row">
+                        <div class="footer-column-icon">
+                            <img src="./asset/img/home/footer-no2.png" alt="">
+                        </div>
+                        <div>
+                            <p class="column-title">100% PRICE MATCH GUARANTEE</p>
+                        </div>
+                    </div>
+                    <div class="footer-column-icon-row">
+                        <div class="footer-column-icon">
+                            <img src="./asset/img/home/footer-no1.png" alt="">
+                        </div>
+                        <div>
+                            <p class="column-title">EASY 30 DAY RETURN POLICY</p>
+                        </div>
+                    </div>
+                    <div class="footer-column-icon-row">
+                        <div class="footer-column-icon">
+                            <img src="./asset/img/home/footer-no3.png" alt="">
+                        </div>
+                        <div>
+                            <p class="column-title">FREE SHIPPING OVER $50</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="final">
+                <div class="footer-content">
+                    <div class="footer-content-wrapper">
+                        <div class="footer-social footer-social-menu js-social-menu">
+                            <h6 class="footer-content-title">  
+                                HELP & SUPPORT
+                                <span class="footer-content-title-icon">
+                                    <i class='js-plus bx bx-plus'></i>
+                                    <i class='js-minus bx bx-minus hide'></i>
+                                </span>
+                            </h6>
+                            <ul class="footer-content-list js-footer-content-list "style="max-height:252px ">
+                                <li class="footer-content-item"><a href="" class="footer-content-link">CONTACT US</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-social footer-social-menu js-social-menu">
+                            <h6 class="footer-content-title">
+                                ABOUT Hudson Furnishing 
+                                <span class="footer-content-title-icon">
+                                    <i class='js-plus bx bx-plus'></i>
+                                    <i class='js-minus bx bx-minus hide'></i>
+                                </span>
+                            </h6>
+                            <ul class="footer-content-list js-footer-content-list" style="max-height:252px">
+                                <li class="footer-content-item"><a href="" class="footer-content-link">ABOUT US</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-social  footer-social-subscribe-wrapper">
+                            <div class="footer-social-contact">
+                                <h6 class="footer-content-title">TRADE PROGRAM</h6>
+                                <div class="footer-social-contact-text">
+                                   
+                                    
+                                </div>
+                            </div>
+                            <div class="footer-social-subscribe">
+                                <h6 class="footer-content-title">CUSTOMER SERVICE</h6>
+                                <div class="footer-social-subscribe-text">
+                                    <p>0783650619 | 6am-9pm<br></p>
+                                </div>
+                            </div>
+                            <div class="footer-social-subscribe">
+                                <h6 class="footer-content-title"></h6>
+                                <div class="footer-social-subscribe-text">
+                                    <p><br></p>
+                                </div>
+                            </div>
+                            <div class="footer-social-subscribe">
+                                <ul class="footer-social-list">
+                                    <li><a href=""><i class='bx bxl-facebook'></i></a></li>
+                                    <li><a href=""><i class='bx bxl-twitter' ></i></a></li>
+                                    <li><a href=""><i class='bx bxl-instagram' ></i></a></li>
+                                    <li><a href=""><i class='bx bxl-tiktok' ></i></a></li>
+                                    <li><a href=""><i class='bx bxl-youtube' ></i></a></li>
+                                    <li><a href=""><i class='bx bxl-discord-alt' ></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-final">
+                    <div class="footer-final-wrapper">
+                        <div class="footer-final-content footer-final-content-text">&copy 2001-2023 Hudson Furnishing · VietNam , CT </div>
+                        <div class="footer-final-content footer-final-content-text">
+                            <ul class="footer-content-list">
+                                <li><a href="./sitemap.html" class="footer-content-item">Site Map</a></li>
+                                <li><a href="" class="footer-content-item">Aptech</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="footer-final-content Khoa">
+                            <div class="footer-final-images">
+                                <a href="" class="footer-final-images-link">
+                                    <img src="./asset/img/CUSC.png" alt="" width="140px" height="35px">
+                                </a>
+                                <a href="" class="footer-final-images-link">
+                                    <img src="./asset/img/Aptech.jpg" alt="" width="140px" height="35px">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.7934024737046!2d105.77768491476496!3d10.03390029282792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0881f9a732075%3A0xfa43fbeb2b00ca73!2sCUSC%20-%20Cantho%20University%20Software%20Center!5e0!3m2!1svi!2s!4v1674741154911!5m2!1svi!2s" width="600" height="250px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+                </div>
+                <div class="icon-return" id="backtop">
+                    <i class='bx bxs-arrow-to-top'></i>
+                </div>
+                 <!-- Date Actually -->
+            <div class="slider-date">
+                <div class="slider-date-wrapper">
+                <p class="slider-date-wrapper-inner"><span id="date"></span></p>
+                <p class="slider-date-wrapper-inner slider-date-wrapper-inner-location"><span id="GeoLocation"></span></p>
+                </div>
+            </div>
+            </footer>
+        </div>
+        <!-- this is sign in -->
+        <div class="modal-sign-in  js-modal-sign-in">
+            <div class="modal-sign-in-container js-modal-sign-in-container">
+                <form action="" id="form-sign-in" class="modal-sign-form ">
+                    <div class="modal-sign-in-form-icon js-modal-sign-in-icon-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+                    <div class="modal-sign-form-header">
+                        <h1 class="modal-sign-form-header-text-header">Sign In</h1>
+                        <p class="modal-sign-form-header-text">Don't have an account yet?</p>
+                        <!-- <button class="modal-sign-form-header-link  ">Sign Up</button> -->
+                        <!-- <a href="/"  class="modal-sign-form-header-link js-sign-up">Sign Up</a> -->
+                    </div>
+                    <div class="modal-sign-form-body">
+                        <label for="email" class="label-text">Email:</label><br>
+                        <input type="mail" id="email" class="input-text" required>
+                        <small></small>
+                    </div>
+                    <div class="modal-sign-form-body">
+                        <label for="password-sign-in" class="label-text">Password:</label><br>
+                        <input type="password" id="password-sign-in" class="input-text" required>
+                        <small></small>
+                    </div>
+                    <input type="submit" value="Sign in" class="input-submit-btn js-sign-in" onclick="signIn();">
+                    <input type="submit" value="Register" class="input-submit-btn js-sign-up">
+                    <a href="" class="modal-sign-in-link-forget">forgot password</a>
+                </form>
+            </div>
+        </div>
+        <!-- this is sign up -->
+        <div class="modal-sign-up js-modal-sign-up">
+            <div class="modal-sign-up-container js-modal-sign-up-container">
+                <form action="" class="modal-sign-up-form">
+                    <div class="modal-sign-up-form-icon js-modal-sign-up-icon-close ">
+                        <i class='bx bx-x'></i>
+                    </div>
+                    <div class="modal-sign-up-form-header">
+                        <h1 class="modal-sign-up-form-header-text-header">Sign Up</h1>
+                    </div>
+                    <div class="modal-sign-up-form-body">
+                        <label for="first" class="label-text">First Name:</label><br>
+                        <input type="text" placeholder="First Name" id="first" class="input-text" required>
+                        <small></small>
+                    </div>
+                    <div class="modal-sign-up-form-body">
+                        <label for="last" class="label-text">Last Name:</label><br>
+                        <input type="text" placeholder="Last Name" id="last" class="input-text" required>
+                        <small></small>
+                    </div>
+                    <div class="modal-sign-up-form-body">
+                        <label for="mail" class="label-text">Email:</label><br>
+                        <input type="mail" placeholder="Email" id="mail" class="input-text" required>
+                        <small></small>
+                    </div>
+                    <div class="modal-sign-up-form-body">
+                        <label for="password class="label-text">Password</label><br>
+                        <input type="password" placeholder="Password" id="password" class="input-text" required>
+                        <small></small>
+                    </div>
+                    <div class="modal-sign-up-form-body">
+                        <label for="confirm" class="label-text">Confirm</label><br>
+                        <input type="password" placeholder="Confirm" id="confirm" class="input-text" required>
+                        <small></small>
+                    </div>
+                    <input type="submit" value="Sign Up" class="input-submit-btn" onclick="register();">
+                </form>
+            </div>
+        </div>
+        <!-- contact button -->
+        <div class="contact-btn">
+            <div class="contact-icon">
+                <span class="icon-message-open js-icon-message-open"><i class='bx bx-message' ></i></span>
+                <span class="icon-message-close js-icon-message-close hide"><i class='bx bx-message-x'></i></span>
+            </div>
+        </div>
+
+
+                <!-- modal contact  -->
+        <div class="modal-contact js-modal-contact">
+            <div class="modal-contact-container">
+                    <div class="modal-contact-container-icon-close js-contact-header-icon-close"><i class='bx bx-x'></i></div>
+                    <div class="modal-contact-container-header js-header-contactus  "> <!-- toggle contact us-->
+                        <div class="container-body-wrapper-header-logo">
+                            <img src="./asset/img/Logo.jpg" alt="" class="container-body-wrapper-header-logo-img">
+                        </div>
+                    </div>
+                    <div class="modal-contact-container-body ">
+                        <div class="box-chat-container js-box-chat hide">  <!-- toggle contact us-->
+                            <div class="box-chat-container-wrapper">
+                                <div class="box-chat-container-inner">
+                                    <div class="box-chat-container-content">
+                                        <div class="box-chat-container-content-header">
+                                            <div class="box-chat-container-content-header-wrapper">
+                                                <div class="box-chat-container-content-header-inner">
+                                                    <div class="chat-header-content">
+                                                        <div class="chat-header-content-title">
+                                                            <div class="back-chat">
+                                                                <button class="back-chat-btn js-back-chat-btn"><i class='bx bx-chevron-left'></i></button>
+                                                            </div>
+                                                            <h1 class="chat-title-heading">Hudson Chat</h1>
+                                                        </div>
+                                                        <div class="chat-header-content-account">
+                                                            <div class="chat-header-content-account-avatar">
+                                                                <div class="chat-header-content-account-avatar-wrapper">
+                                                                    <div class="chat-header-content-account-avatar-inner">
+                                                                        <div class="chat-account-user user1">
+                                                                            <div class="chat-account-user-wrapper">
+                                                                                <div class="chat-account-user-inner"><img src="./asset/img/0x0.png" alt="" class="chat-account-user-avatar"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="chat-account-user user2">
+                                                                            <div class="chat-account-user-wrapper">
+                                                                                <div class="chat-account-user-inner"><img src="./asset/img/0x1.jpg" alt="" class="chat-account-user-avatar"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="chat-account-user user3">
+                                                                            <div class="chat-account-user-wrapper">
+                                                                                <div class="chat-account-user-inner"><img src="./asset/img/0x2.jpg" alt="" class="chat-account-user-avatar"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <h2 class="chat-header-content-account-title">We'll be back online on Monday</h2>
+                                                            <div class="chat-header-content-account-description">
+                                                                <span class="chat-header-content-account-desc">
+                                                                    Chat is available during business hours Mon-Fri and you can email us anytime at support@hudson.com. Thanks for stopping by!😀
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box-chat-container-content-body">
+                                            <div class="box-chat-container-content-body-wrapper">
+                                                <div class="box-chat-container-content-body-inner">
+                                                    <div class="box-chat-container-content-body-content">
+                                                        <div class="box-chat-container-content-body-content-blank" style="bottom:162px">
+                                                            <div class="box-chat-container-content-body-content-blank-wrapper">
+                                                                <div class="box-chat-container-content-body-content-blank-inner">
+                                                                    <div class="box-chat-container-content-body-content-blank-content"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-chat-container-content-body-content-text-box">
+                                                            <div class="box-chat-container-content-body-content-text-box-wrapper">
+                                                                <input type="email" placeholder="khoapham@gmail.com" class="body-content-text-box-input-mail">
+                                                                <input type="text" placeholder="Write your message ..." class="body-content-text-box-enter-message">
+                                                                <div class="body-content-text-box-send-icon">
+                                                                    <button class="body-content-text-box-icon"><i class='bx bx-smile'></i></button>
+                                                                    <button class="body-content-text-box-send"><i class='bx bx-send' ></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="modal-contact-container-body-wrapper js-body-contactus"> <!-- toggle contact us-->
+                            <div class="modal-contact-container-body-wrapper-header">
+                                <div class="container-body-wrapper-header-account">
+                                    <div class="header-account-wrapper">
+                                        <div class="header-account account1">
+                                            <div class="header-account-image"><img src="./asset/img/0x0.png" alt=""></div>
+                                        </div>
+                                        <div class="header-account account2">
+                                            <div class="header-account-image"><img src="./asset/img/0x1.jpg" alt=""></div>
+                                        </div>
+                                        <div class="header-account account3">
+                                            <div class="header-account-image"><img src="./asset/img/0x2.jpg" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-contact-container-body-wrapper-help">
+                                <h1 class="wrapper-help-title">Hi THERE !</h1>
+                                <h1 class="wrapper-help-title">HOW CAN WE HELP?</h1>
+                            </div>
+                            <div class="modal-contact-container-body-wrapper-massage">
+                                <div class="modal-contact-container-body-wrapper-massege-wrapper">
+                                    <li class="modal-contact-container-body-wrapper-massege-inner js-message-chat">
+                                        <div class="massege-inner-chat">
+                                            <strong>Send Us a Message</strong>
+                                            <p class="massege-inner-chat-desc">We typically reply within a day</p>
+                                        </div>
+                                        <div class="massege-inner-icon-send"><i class='bx bx-send'></i></div>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+</body>
+<script>
+    var today = new Date();
+    var date = (+ today.getHours() +":" +today.getMinutes() +"&nbsp;&nbsp;" + (today.getMonth()+1) +"/" + today.getDate() +"/" + today.getFullYear());
+    document.getElementById("date").innerHTML = date;
+
+    var x = document.getElementById("GeoLocation");
+        function getLocation() {
+        if (local.geolocation) {
+            local.geolocation.watchPosition(showPosition);
+        } else {
+            x.innerHTML = "Browser does not support.";
+        }
+        }
+        function showPosition(location) {
+        x.innerHTML = "Latitude: " + location.coords.latitude +
+        "&nbsp;&nbsp;Longitude: " + location .coords.longitude;
+        }
+        getLocation();
+</script>
+<script src="./js/app.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<script>
+    // this is jQuery
+    // function back to top
+    $(document).ready(function(){ 
+        
+      $(window).scroll(function(){
+        if($(this).scrollTop() >40 ){
+            $("#backtop").fadeIn();
+        }else{
+            $("#backtop").fadeOut();
+        }
+      });
+
+        $("#backtop").click(function(){
+            $("html,body").animate({scrollTop: 0},1000);
+        });
+    });
+</script>
+<script>
+    const backChatBtn = document.querySelector(".js-back-chat-btn");
+    const toggleMessage = document.querySelector(".js-message-chat");
+    const toggleSend = document.querySelector(".massege-inner-icon-send");
+    const headerContactUS = document.querySelector(".js-header-contactus");
+    const bodyContactUS = document.querySelector(".js-body-contactus");
+    const boxChat = document.querySelector(".js-box-chat");
+
+    toggleMessage.addEventListener('click',()=>{
+        boxChat.classList.remove("hide");
+        bodyContactUS.classList.add("hide");
+        headerContactUS.classList.add("hide");
+    });
+    backChatBtn.addEventListener("click",()=>{
+        boxChat.classList.add("hide");
+        bodyContactUS.classList.remove("hide");
+        headerContactUS.classList.remove("hide");
+    })
+</script>
+</html>
